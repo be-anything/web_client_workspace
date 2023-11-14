@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML | Image</title>
+</head>
+<body>
+    <h1>Image</h1>
+    <!--  
+        src 경로 이미지경로. 절대/상대경로
+        alt 대체텍스트. 이미지로드에 실해시 화면에 노출될 텍스트.
+            스크린리더에 의해 해석/전달됨.
+    -->
+    <img src="../sample/image/flower1.PNG" alt="대체텍스트" style = "width: 30%;">
+    <img src="/sample/image/flower1.PNG" alt="대체텍스트" style = "width: 30%;">
+    <img src="../sample/image/flower19999.PNG" alt="분홍색 벚꽃 이미지" style = "width: 30%;">
+    <img src="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*" alt="아기리트리버" style = "width: 100%;">
+
+    <h2>절대 | 상대 단위</h2>
+    <h3>절대 단위</h3>
+    <div>
+        <img src="../sample/image/flower1.PNG" width="100px" alt="">
+        <img src="../sample/image/flower2.PNG" width="100px" alt="">
+        <img src="../sample/image/flower3.PNG" width="100px" alt="">
+        <img src="../sample/image/flower4.PNG" width="100px" alt="">
+        <img src="../sample/image/flower5.PNG" width="100px" alt="">
+    </div>
+    <h3>% 상대(가변) 단위</h3>
+    <!-- 부모태그 기준으로 상대크기를 결정 -->
+    <div>
+        <img src="../sample/image/flower2.PNG" width="18%" alt="">
+        <img src="../sample/image/flower1.PNG" width="18%" alt="">
+        <img src="../sample/image/flower3.PNG" width="18%" alt="">
+        <img src="../sample/image/flower4.PNG" width="18%" alt="">
+        <img src="../sample/image/flower5.PNG" width="18%" alt="">
+    </div>
+
+    <h2>정렬 float</h2>
+    <!-- div>img+p>lorem -->
+    <div>
+        <img 
+            src="../sample/image/river1.PNG" 
+            width="200px" 
+            style="float: left; margin: 10px;"
+            alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum asperiores illo quos perferendis atque repudiandae maxime laudantium consequuntur! Eius ducimus labore suscipit assumenda libero tempora illo temporibus animi molestias eum.</p>
+    </div>
+    <div>
+        <img 
+            src="../sample/image/river1.PNG" 
+            width="200px" 
+            style="float: right; margin: 10px;"
+            alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum asperiores illo quos perferendis atque repudiandae maxime laudantium consequuntur! Eius ducimus labore suscipit assumenda libero tempora illo temporibus animi molestias eum.</p>
+    </div>
+
+    
+
+</body>
+</html>
