@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_TotalHtml</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>납품자 정보</legend>
+
+            <ol>
+                <li for="name">
+                    납품자명(필수) : 
+                    <input type="text" name="name" id="name" required>
+                </li>
+                <br>
+                <li for="email">
+                    email(필수) : 
+                    <input 
+                        type="email" name="email" id="email"
+                        placeholder="answer@naver.com" required>
+                </li>
+                <br>
+                <li for="homepage">
+                    홈페이지 : 
+                    <input type="url" name="homepage" id="homepage" value="http://">
+                </li>
+                <br>
+                <li>
+                    지역 : 
+                    <select name="location" id="location">
+                        <option value="busan">부산</option>
+                        <option value="seoul">서울</option>
+                        <option value="gimpo">김포</option>
+                    </select>
+                </li>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <legend>납품 정보</legend>
+            <ul>
+                <li for="productName">
+                    상품명(필수) :
+                    <input type="text" name="productName" id="productName" required>
+                </li>
+                <br>
+                <li for="cnt">
+                    납품수량(필수) : 
+                    <input type="number" name="cnt" id="cnt" min="100"
+                        placeholder="최소 100" required>
+                </li>
+                <br>
+                <li for="grade">
+                    납품등급(필수) : 
+                    <input type="range" name="grade" id="grade"
+                        value="50" required>
+                </li>
+                <br>
+                <li for="etc">
+                    기타사항 : 
+                    <textarea name="etc" id="etc" cols="30" rows="2"></textarea>
+                </li>
+            </ul>
+        </fieldset>
+            <input type="submit" value="send message">
+    </form>
+</body>
+</html>
