@@ -1,0 +1,27 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: silver;
+    /* border: 1px solid black; */
+    border-top: 3px dashed red;
+    border-bottom: 3px dashed green;
+    border-left: 3px dotted black;
+    border-right: 3px solid blue;
+}
+.item {
+    margin: 30px auto;
+    width: 200px;
+    height: 200px;
+    background-color: skyblue;
+    /* lefttop righttop rightbottom leftbottom */
+    /* border-radius: 10px 20px 30px 40px; */
+    /* border-radius: 0 30px; */
+    border-radius: 50%;
+
+}
+.item:hover{
+    /* x-offset y-offset blur spread color */
+    /* - blur 번짐정도 */
+    /* - spread 그림자크기 */
+    box-shadow: 0px 0px 36px 0px skyblue;
+}

@@ -1,0 +1,31 @@
+.parent {
+    background-color: bisque;
+    text-align: center;
+}
+.parent span {
+    background-color: hotpink;
+}
+.box {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #000; /* #rgb #rrggbb */
+    /* center 위아래 좌우 정렬 */
+    /* margin: 0 auto; */
+    /* right 정렬 */
+    margin-left: auto;
+    /* left 정렬(생략해도 무방) */
+    /* margin-right: auto; */
+}
+.item {
+    width: 200px;
+    height: 200px;
+    background-color: thistle;
+    border: 1px solid #000;
+    margin: 0 auto;
+    /* text-align: center; */
+
+    /* 가운데(상하좌우) 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,130 @@
+/* 태그 선택자 */
+/* ul {
+    background-color: rgb(0, 128, 255);
+} */
+/* 아이디 선택자 */
+/* #foo1 {
+    font-weight: bold;
+} */
+/* 클래스 선택자 */
+/* .group1 {
+    color: floralwhite;
+} */
+/* .group2{
+    color: lightpink;
+} */
+/* .group1.group2{
+    color: lightgreen;
+} */
+/* 속성 선택자 */
+/* [title] {
+    cursor: pointer;
+}
+[title=안녕2] {
+    text-decoration: underline;
+} */
+/* 혼용 */
+/* li#foo3 {
+    background-color: rgb(117, 107, 255);
+} */
+/* 복수개 */
+/* #foo4, #foo5 {
+    color: silver;
+} */
+
+/* 자식 선택자 */
+/* #parent > h4 {
+    color: tomato;
+} */
+
+/* 후손 선택자 */
+/* #parent h4 {
+    color: violet;
+}
+#parent > ul > li {
+    color: wheat;
+}
+#parent #child li {
+    color: cadetblue;
+}
+#parent #child > ul > li {
+    color: blue;
+} */
+
+/* 형제 선택자 */
+/* 다음 형제요소 하나 */
+#p1 + p {
+    color: springgreen;
+}
+/* 다음 형제요소 모두 */
+/* #p1 ~ p {
+    text-decoration: underline;
+} */
+/* 모든 요소 선택자 * */
+#p1 ~ * {
+    text-decoration: underline;
+}
+/* 가상클래스 선택자 */
+/* - 특정 상황에 작동하는 선택자 */
+#bar1:active {
+    background-color: black;
+    color: aliceblue;
+}
+#bar2:hover {
+    background-color: violet;
+    color: aliceblue;
+}
+
+/* 위치관련 가상클래스 선택자 */
+/* child계열(위치) */
+#season-wrapper :first-child {
+    color: springgreen;
+}
+/* 직계자식중에서 first-child */
+/* #season-wrapper > :first-child {
+    color: springgreen;
+} */
+/* 후손의 첫번째 자식 중 p태그만 */
+/* #season-wrapper p:first-child {
+    color: springgreen;
+} */
+/* #season-wrapper :last-child {
+    color: springgreen;
+} */
+/* #season-wrapper :nth-child(3) {
+    color: springgreen;
+} */
+#season-wrapper :nth-child(2n) {
+    color: springgreen;
+}
+#season-wrapper :nth-child(2n+1) {
+    color: springgreen;
+}
+
+/* of-type 계열(타입별로 위치) */
+/* #season-wrapper p:first-of-type {
+    color: springgreen
+} */
+#season-wrapper p:last-of-type {
+    color: springgreen 
+}
+
+/* 부정선택자 */
+#client-langs li:not(#css3) {
+    color: crimson;
+}
+
+/* 루트선택자 */
+:root {
+    background-color: bisque;
+}
+
+/* 가상요소 선택자 */
+/* ::before 시작태그와 내용사이 */
+#price-list li::before {
+    content: '⭐';
+}
+/* ::after 종료태그와 내용사이 */
+#price-list li::after {
+    content: '🍰';
+}

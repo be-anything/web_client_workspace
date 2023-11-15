@@ -1,0 +1,52 @@
+/* 폰트 종류구분 */
+/* serif 글자끝에 삐침 있음 */
+/* sans-serif 글자끝에 삐침 없음 */
+/* cursive 필기체 */
+/* monospace 글자간격이 모두 동일 */
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@font-face {
+    font-family: 'YClover-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/YClover-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+* {
+    font-size: 30px;
+}
+#font1 {
+    /* 폰트나열, 왼쪽부터 존재하는지 검사후 적용 마지막 generic-family 작성 */
+    font-family: 'YClover-Bold', serif;
+    font-size: 50px;
+}
+#font2 {
+    /* font-family: 'Dongle', sans-serif;
+    font-size: 50px;
+    line-height: 80px;
+    font-weight: 300;
+    font-style: italic; */
+    /* 모아쓰기 shorthand */
+    /* font: font-style font-variant font-weight font-size/line-height font-family */
+    font : italic 300 50px/30px 'Dongle', sans-serif;
+}
+#font3 {
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+#parent {
+    font-size: 32px;
+}
+html {
+    font-size: 50px;
+}
+#parent :first-child {
+    font-size: 24px; /* - 절대크기 */
+}
+#parent :nth-child(2) {
+    font-size: 150%; /* 부모요소 상대크기 */
+}
+#parent :nth-child(3) {
+    font-size: 1.5em; /* 부모요소 상대크기*/
+}
+#parent :last-child { /* 루트요소 상대크기 */
+    font-size: 1.5rem;
+}
