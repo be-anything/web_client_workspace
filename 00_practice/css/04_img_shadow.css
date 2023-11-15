@@ -1,0 +1,17 @@
+#img-wrapper {
+    margin: 0 auto;
+    width: 1600px;
+    height: 400px;
+    background-color: rgb(203, 203, 203);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#img-wrapper img {
+    height: 75%;
+    margin: 0 5px;
+}
+#img-wrapper img:hover {
+    box-shadow: 5px 5px 10px rgb(75, 75, 75);
+}
