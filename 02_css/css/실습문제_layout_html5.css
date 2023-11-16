@@ -1,0 +1,68 @@
+body {
+    width: 60vw;
+    margin: 10px auto;
+}
+#container {
+    padding: 10px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .1);
+    display: flex;
+    flex-wrap: wrap;
+}
+header {
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, .2);
+}
+header > h2 {
+    margin: 0;
+    padding: 20px;
+}
+header > nav > .navi {
+    margin: 0;
+    padding: 0 10px 20px 0;
+    list-style: none;
+    display: flex;
+    justify-content: end;
+}
+header > nav > .navi li {
+    width: 80px;
+    text-align: center;
+}
+header > nav > .navi li:not(:last-child) {
+    border-right: 1px solid #000;
+}
+header > nav > .navi a {
+    text-decoration: none;
+    color: #000;
+}
+header > nav > .navi li:hover a {
+    color: #fff;
+}
+
+/* section */
+#content {
+    width: 70%;
+    height: 500px;
+    background-color: #f8f8f8;
+}
+#content article {
+    padding: 20px;
+}
+#content article:last-child {
+    padding-top: 0;
+}
+aside {
+    width: 30%;
+    background-color: #d9d9d9;
+}
+aside > h4 {
+    padding: 20px;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    background-color: #858585;
+    text-align: center;
+}
