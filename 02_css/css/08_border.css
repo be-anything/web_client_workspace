@@ -18,6 +18,7 @@
     /* border-radius: 0 30px; */
     border-radius: 50%;
 
+    /* margin과 padding은 top right bottom left 순으로 작성 */
 }
 .item:hover{
     /* x-offset y-offset blur spread color */
