@@ -14,12 +14,17 @@
 //     area.innerHTML = `구입자 : ${name.value}님<br>구입상품 : ${product.value}<br>구매가격 : ${price.value}만원` 
 // }
 // // 풀이2
-// function printValue(){
-//     const list = document.querySelector("form[name=purchaseFrm]");
-//     const area = document.getElementById("area");
+function printValue(){
+    const list = document.querySelector("form[name=purchaseFrm]");
+    const area = document.getElementById("area");
 
-//     area.innerHTML = `구입자 : ${list[0].value}님<br>구입상품 : ${list[1].value}<br>구매가격 : ${list[2].value}만원` 
-// }
+    // form단위로 가져올 수 있음
+    const form = document.forms[0];
+    const formFindByName = document.purchaseFrm; 
+    // form의 name값으로 가져오는 방법이 가장 간단하니 이렇게 사용하자
+
+    area.innerHTML = `구입자 : ${list[0].value}님<br>구입상품 : ${list[1].value}<br>구매가격 : ${list[2].value}만원` 
+}
 // 풀이3
 // function printValue(){
 //     const list = document.getElementsByName("purchaseFrm")[0];
@@ -27,14 +32,14 @@
 
 //     area.innerHTML = `구입자 : ${list[0].value}님<br>구입상품 : ${list[1].value}<br>구매가격 : ${list[2].value}만원` 
 // }
-function printValue() {
-    const input1 = document.getElementsByTagName("input");
-    const name = input1[0].value;
-    const pname = input1[1].value;
-    const price = input1[2].value;
+// function printValue() {
+//     const input1 = document.getElementsByTagName("input");
+//     const name = input1[0].value;
+//     const pname = input1[1].value;
+//     const price = input1[2].value;
     
-    console.dir(name);
-    console.dir(pname);
-    console.dir(price);
-    alert(name + pname + price);
-}
+//     console.dir(name);
+//     console.dir(pname);
+//     console.dir(price);
+//     alert(name + pname + price);
+// }
