@@ -78,19 +78,19 @@ function test1(){
     // name으로 참조해서 출력하기
     // const name = document.getElementsByName("name");
     // console.log(name[0].value);
-
+    
     // tag로 참조해서 출력하기
     // const inputs = document.getElementsByTagName("input");
 
     // id로 참조해서 출력하기
-    // const name = document.getElementById("name");
-    // console.log(name.value);
+    const name = document.getElementById("name");
+    console.log(name.value);
     
     // class이름으로 참조해서 출력하기
     const user = document.getElementsByClassName("user-input");
     // console.dir(findClassName);
-    console.log(user["name"].value);
-    console.log(user["age"].value);
+    console.log(user[0].value);
+    console.log(user[1].value);
 }
 function test2(){
     const scoreInput = document.getElementById("score");
@@ -103,7 +103,7 @@ function test2(){
  * - 여러개의 요소를 반환하는 선택자를 사용한 경우 첫번째 요소만 반환
  */
 function _querySelector(){
-    const li1 = document.querySelector("#li1");
+    const li1 = document.querySelector("li");
     console.log(li1);
     li1.innerHTML = "안녕";
 
