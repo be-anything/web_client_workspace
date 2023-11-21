@@ -8,10 +8,15 @@ function printMovie(){
 function printConsole(){
     const rainbow = ["빨", "주", "노", "초", "파", "남", "보"];
 
-    for(let i = 0; i < rainbow.length ; i++){
-        i !== 0 && rainbow.push(rainbow.shift());
-        console.log(rainbow);
-    }
+    // for(let i = 0; i < rainbow.length ; i++){
+    //     i !== 0 && rainbow.push(rainbow.shift());
+    //     console.log(rainbow);
+    // }
+    // 출력을 먼저하도록 변경하면 됨
+    for (let i = 0; i < rainbow.length; i++) {
+        console.log(rainbow.toString());
+        rainbow.push(rainbow.shift());
+      }
 }
 
 function copyArray(){

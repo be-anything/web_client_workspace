@@ -119,7 +119,7 @@ function test4(){
 /**
  * Date
  * - 날짜/시각을 관리하는 객체
- * - 기본적으로 시스템시작을 읽어와서 사용
+ * - 기본적으로 시스템시각을 읽어와서 사용
  */
 function test5(){
     const now = new Date(); // new 생성자함수 호출!

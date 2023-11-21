@@ -48,6 +48,4 @@ function test() {
     console.log(c);
 
     // let c = 'ㅋㅋㅋ'; // Uncaught SyntaxError: Identifier 'c' has already been declared
-
-    
 }
