@@ -181,10 +181,10 @@ const test7 = () => {
         return function(a, b){ a + b; }, a, b;
     }));
 
-    // console.log(calc2((a, b) => a - b, 10, 20)); // -10
-    // console.log(calc2((a, b) => a * b, 10, 20)); // 200
-    // console.log(calc2((a, b) => a / b, 10, 20)); // 0.5
-    // console.log(calc2((a, b) => a % b, 10, 20)); // 10
+    console.log(calc2((a, b) => a - b, 10, 20)); // -10
+    console.log(calc2((a, b) => a * b, 10, 20)); // 200
+    console.log(calc2((a, b) => a / b, 10, 20)); // 0.5
+    console.log(calc2((a, b) => a % b, 10, 20)); // 10
 };
 
 const runner = (f) => {
