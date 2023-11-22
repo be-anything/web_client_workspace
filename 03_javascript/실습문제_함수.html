@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>눈코딩 문제</h1>
+    <script>
+        //1
+        let z = 50;
+        (() => {
+            let z = 55;
+            z += 45;
+            console.log(`z = ${z}`); // z = 100
+        })();              
+        console.log(`z = ${z}`); // z = 50
+        
+        //2
+        let y = 99;
+        (() => {
+            let x = 100;
+            let y = 9;
+            z = 1;
+            console.log(`x + y + z = ${x + y + z}`); // x + y + z = 110
+        })();
+        console.log(`y + z = ${y + z}`); // y + z = 100
+        // console.log(`x + y + z = ${x + y + z}`); // x + y + z = NaN(오답)
+        // x 자체가 정의되지 않았으므로 NaN이 아닌 오류 발생
+        // Uncaught ReferenceError: x is not defined
+        
+        //3
+        let i; // 전역 i
+        for (i = 1; i <= 10; i++) {
+            console.log(i); // 1~10까지 출력 // 1 2 3 4 5 6 7 8 9 10
+        }
+        
+        (() => {
+            console.log(`i = ${i}`);  // i = 10(오답)
+            // i = 11일 때, for문을 탈출하므로 마지막 i값은 10이 아닌 11
+        })();
+            
+        //4 
+        function foo(){
+            const num = 100;
+            return () => {
+                console.log(`num = ${num}`);
+            }
+        }
+        const num = 200;
+        const too = foo(); // num = 100 (오답)
+        too(); // num = 100 
+        // -> 실제로 함수가 호출된 건 마지막뿐이므로 num = 100은 한번만 출력됨
+        
+        </script>
+</body>
+</html>
