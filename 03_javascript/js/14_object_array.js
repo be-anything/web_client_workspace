@@ -34,7 +34,6 @@ const test1 = () => {
         }
     });
     console.log(pets);
-
 }
 
 /**
@@ -49,8 +48,6 @@ const test2 = () => {
     pets.push(new Pet('구리구리', '푸들', 3, 10, 'white'));
     pets.push(new Pet('애득', '말티즈', 4, 9, 'white'));
     pets.push(new Pet('사랑이', '코카스파니엘', 13, 5, 'white', 'brown'));
-
-    console.log(pets);
 
     pets.forEach((pet) => console.log(`${pet.name}가 ${pet.bark()} 짖는다~`));
 }
