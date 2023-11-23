@@ -80,5 +80,25 @@ const sortContactByName = (order) => {
 
 // 나이기준 정렬
 const sortContactByAge = (order) => {
+    const userList = [...document.querySelectorAll("#contact tbody tr")];
 
+    let compareFunction;
+    switch(order){
+        case 'asc':
+        compareFunction = (tr1, tr2) => {
+            return tr1.querySelector("td:nth-child(2)").innerHTML - tr2.querySelector("td:nth-child(2)").innerHTML;
+        }    
+        ; break;
+        case 'desc': 
+        compareFunction = (tr1, tr2) => {
+            return tr2.querySelector("td:nth-child(2)").innerHTML - tr1.querySelector("td:nth-child(2)").innerHTML;
+        }    
+        ; break;
+    }
+
+    console.log(userList.sort(compareFunction));
+
+    userList.forEach((tr) => {
+        document.querySelector("table#contact tbody").append(tr);
+    });
 };
