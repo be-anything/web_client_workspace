@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI구현</title>
+    <style>
+        body {
+            background-color: rgb(225, 239, 255);
+        }
+        fieldset {
+            margin: 0 auto;
+            width: 400px;
+            height: 400px;
+
+            border: 2px solid rgb(198, 198, 198);
+            background-color: #f7f7f7;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+        fieldset > div {
+            width: 350px;
+            height: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: space-between;
+            
+            margin: 10px 0;
+        }
+        fieldset > div#email-wrap input {
+            width: 90px;
+            margin-left: auto;
+        }
+        fieldset > div#addr-wrap div{
+            width: 210px;
+            margin-left: auto;
+        }
+        fieldset > div#addr-wrap input:first-child {
+            margin-bottom: 10px;
+        }
+        fieldset > div input {
+            width: 200px;
+            border: 0;
+            border-bottom: 2px dashed #868686;
+            background-color: transparent;
+        }
+        fieldset label, button {
+            font-weight: bold;
+        }
+        fieldset > button {
+            width: 350px;
+            height: 50px;
+            border: 0;
+            margin: 30px 0 0;
+            background-color: rgb(200, 228, 200);
+            font-size: 16px;
+        }
+        sub {
+            width: 100%;
+            text-align: right;
+        }
+        .required-sub {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <div>
+                <label for="userid">아이디</label>
+                <input type="text" name="userid" id="userid" required>
+                <sub class="required-sub">필수 입력 항목 입니다.</sub>
+            </div>
+            <div>
+                <label for="pwd">패스워드</label>
+                <input type="password" name="pwd" id="pwd" required>
+                <sub class="required-sub">필수 입력 항목 입니다.</sub>
+            </div>
+            <div>
+                <label for="pwdConfirm">패스워드 확인</label>
+                <input type="password" name="pwdConfirm" id="pwdConfirm" required>
+                <sub class="required-sub">필수 입력 항목 입니다.</sub>
+            </div>
+            <div id="email-wrap">
+                <label for="email">이메일</label>
+                <div>
+                    <input type="text" name="email" id="email-id">@
+                    <input type="text" name="email" id="email-addr">
+                </div>
+            </div>
+            <div id="addr-wrap">
+                <label for="addr">주소</label>
+                <div>
+                    <input type="text" name="addr" id="addr-1">
+                    <input type="text" name="addr" id="addr-2">
+                </div>
+            </div>
+            <button type="submit" id="join">가입</button>
+        </fieldset>
+    </form>
+
+    <script src="js/nsc_ui.js"></script>
+</body>
+</html>
