@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>저를 확인하세요...😎</title>
+</head>
+<body>
+  <h1>저를 확인하세요...😎</h1>
+  <input type="checkbox" id="popup_checked">
+  <label for="popup_checked">다시 보지 않기</label>
+  <script>
+	// 체크박스 change 핸들러 작성
+  localStorage.setItem("isChecked", JSON.stringify("false"));
+  
+  document.querySelector('#popup_checked').addEventListener('click', (e) => {
+    if(e.target.checked)
+        localStorage.setItem("isChecked", JSON.stringify(e.target.checked));
+  });
+
+  </script>
+</body>
+</html
